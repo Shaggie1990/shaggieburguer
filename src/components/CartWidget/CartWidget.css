@@ -1,3 +1,27 @@
-.cart h3{
-    color:rgb(0, 5, 80);
+.cart {
+    display: flex;
+    position: relative;
 }
+
+.cart h3{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.cart__icon {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+.cart__counter {
+    color: rgb(255, 255, 255);
+    background-color: #ff0000;
+    padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+    border-radius: 10%;
+    position: absolute;
+    line-height: 1rem;
+    right: 0;
+    bottom: 0;
+    transform: translateX(10%) translateY(10%);
+    font-size: 1rem;
+    font-weight: bold;
+} 
