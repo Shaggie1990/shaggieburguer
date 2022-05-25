@@ -1,38 +1,31 @@
 import { useState } from 'react';
-import itemImg from '../../images/hamburguesa clasica.jpg';
 import '../ItemCount/ItemCount.css';
 
 
-export default function ItemCount({stock, initial}) {
-    const [quantity, addQuantity] = useState(initial);
+export default function ItemCount({item, initial, stock, onAdd, handleInputType}) {
+    const [quantity, setQuantity] = useState(initial);
 
-    function onAdd() {
-        if (quantity === stock) {
-            console.log("sin stock");
-        } else {
-            addQuantity(quantity + 1);
+    function increase() {
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
         } 
     }
-
-    function onLess() {
-        if (quantity === 1) {
-            console.log("cantidad minima");
-        } else {
-            addQuantity(quantity - 1);
+    function decrease() {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
         } 
     }
-
+    function addToCart() {
+        onAdd(quantity, item.name);
+        handleInputType();
+    }
+    
     return (
         <div className="itemCount">
-            <img className="itemCount__img" src={itemImg} alt="" />
-            <div className="itemCount__filter"></div>
-            <div className="itemCount__info">
-                <h2 className="itemCount__title">Hamburguesa Clasica</h2>
-                <button id='less' className="itemCount__minusBtn" onClick={onLess}>-</button>
-                <span className="itemCount__quantity">{quantity}</span>
-                <button id='plus' className="itemCount__plusBtn" onClick={onAdd}>+</button>
-                <button className="itemCount__addToCartBtn"><i class="bi bi-bag-plus"></i></button>
-            </div>
+            <button id='less' className="itemCount__minusBtn" onClick={decrease}>-</button>
+            <span className="itemCount__quantity">{quantity}</span>
+            <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
+            <button className="itemCount__addToCartBtn" onClick={addToCart}><i class="bi bi-bag-plus"></i></button>
         </div>
     );
 }

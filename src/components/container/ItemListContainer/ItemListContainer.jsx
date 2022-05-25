@@ -1,13 +1,32 @@
 
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import '../../container/ItemListContainer/ItemListContainer.css';
-import ItemCount from '../../ItemCount/ItemCount';
+import ItemList from '../../ItemList/ItemList';
+import Loader from '../../Loader/Loader';
 
 
-export default function ItemListContainer({greeting}) {
+
+export default function ItemListContainer() {
+    const [items,setItems] = useState([]);
+    const [loader,setLoader] = useState(true);
+    const {id} = useParams();
+
+    useEffect(() => {
+        setTimeout(() => {
+            fetch("/assets/data.json")
+            .then(response => response.json())
+            .then(data => setItems(data))
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        }, 5000);
+    },[]);
+
     return (
         <div className="itemListContainer">
-            <h1 className="itemListContainer__title" >{greeting}</h1>
-            <ItemCount initial={1} stock={5}/>
+            {loader?
+                <Loader/>:
+                <ItemList items={items} id={id} />}
         </div>
     );
 }
