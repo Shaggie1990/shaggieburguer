@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(0, 9, 141);
+    background-color: rgb(0, 5, 77);
     font-size: 1rem;
     padding: 1rem;
     flex-flow: row wrap;
@@ -14,6 +14,7 @@
     max-width: 640px;
     text-align: center;
 }
+
 
 .header__img {
     width: 50px;
@@ -26,6 +27,8 @@
 .navBar__item {
     list-style: none;
     margin: 0 1rem;
+    color: white;
+    font-size: 30px;
 }
 .navBar__link {
     text-decoration: none;
@@ -36,4 +39,23 @@
 
 .navBar__link:hover {
     opacity: 80%;
+}
+
+@media (min-width: 600px) {
+    .navBar__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navBar__list {
+        font-size: 2rem;
+    }
+
+    .header__logo {
+        width: 50px;
+    }
 }

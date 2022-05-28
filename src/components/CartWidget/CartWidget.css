@@ -1,18 +1,18 @@
-.cart {
+.cartWidget {
     display: flex;
     position: relative;
 }
 
-.cart h3{
+.cartWidget h3{
     color: rgb(255, 255, 255);
     font-size: 2.5rem;
 }
 
-.cart__icon {
+.cartWidget__icon {
     color: rgb(255, 255, 255);
     font-size: 2rem;
 }
-.cart__counter {
+.cartWidget__counter {
     color: rgb(255, 255, 255);
     background-color: #ff0000;
     padding: 0.1rem 0.1rem 0.1rem 0.1rem;
@@ -25,3 +25,11 @@
     font-size: 1rem;
     font-weight: bold;
 } 
+@media (min-width: 768px) {
+    .cartWidget__icon {
+        font-size: 3.5rem;
+    }
+    .cartWidget__counter {
+        font-size: 1.5rem;
+    }
+}

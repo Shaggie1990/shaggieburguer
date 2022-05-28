@@ -1,19 +1,15 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail";
+import { useParams,} from "react-router-dom";
+import ItemDetail from "../../ItemDetail/ItemDetail";
 import Loader from "../../Loader/Loader";
 import '../ItemDetailcontainer/ItemDetailContainer.css';
-
-
-
-
 
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
     const [loader,setLoader] = useState(true);
     const [quantityToAdd,setQuantityToAdd] = useState();
 
-    const {id} = useSearchParams();
+    const {id} = useParams();
 
     function onAdd(quantity, name) {
         setQuantityToAdd(quantity)
@@ -22,7 +18,7 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("/data/data.json")
+            fetch("/assets/data.json")
             .then(response => response.json())
             .then(itemsList => itemsList.find(el => el.id === id))
             .then(data => setItem(data))

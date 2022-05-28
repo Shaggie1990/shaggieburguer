@@ -1,11 +1,8 @@
-
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../../container/ItemListContainer/ItemListContainer.css';
 import ItemList from '../../ItemList/ItemList';
 import Loader from '../../Loader/Loader';
-
-
+import '../../container/ItemListContainer/ItemListContainer.css';
 
 export default function ItemListContainer() {
     const [items,setItems] = useState([]);
