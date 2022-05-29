@@ -1,4 +1,4 @@
- {/* import { UseCartContext } from "../context/CartContext";
+import { UseCartContext } from "../context/CartContext";
 import '../Cart/CartItem.css';
 
 export default function CartItem({item}) {
@@ -11,4 +11,4 @@ export default function CartItem({item}) {
     return (
         <li>Item: {item.nombre} - Precio: ${item.precio} - Cantidad: {item.quantity} - <span className="cart__remove-icon" onClick={removeItem}><i className="bi bi-bag-x-fill"></i></span></li>
     );
-} */}
+}

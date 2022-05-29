@@ -1,4 +1,4 @@
-.header {
+.Navbar__Header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -7,6 +7,7 @@
     font-size: 1rem;
     padding: 1rem;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .navBar {
@@ -15,26 +16,24 @@
     text-align: center;
 }
 
-
-.header__img {
+.nav__img {
     width: 50px;
 }
 
-.navBar__list {
+.navBar {
     display: flex;
     flex-flow: row wrap;
 }
-.navBar__item {
+
+.navBar__link {
     list-style: none;
     margin: 0 1rem;
-    color: white;
-    font-size: 30px;
-}
-.navBar__link {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-size: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .navBar__link:hover {

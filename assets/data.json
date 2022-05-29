@@ -1,98 +1,202 @@
 [
     {
         "id": "01",
-        "category": "Hamburguesa",
-        "name": "Hamburguesa Cheddar",
-        "price": "950",
-        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
-    },
-    {
-        "id": "02",
-        "category": "Hamburguesa",
-        "name": "Hamburguesa Doble",
-        "price": "950",
-        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
-    },
-    {
-        "id": "03",
-        "category": "Hamburguesa",
-        "name": "Hamburguesa Triple",
-        "price": "950",
-        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
-    },
-    {
-        "id": "04",
-        "category": "Hamburguesa",
-        "name": "Hamburguesa Cuadruple",
-        "price": "950",
-        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
-    },
-    {
-        "id": "05",
-        "category": "Hamburguesa",
+        "category": "Carnes",
         "name": "Hamburguesa Clasica",
         "price": "950",
         "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
+        "detail": "Medallón de carne, lechuga, tomate, salsa ketchup, mayonesa y cebolla."
     },
     {
-        "id": "06",
-        "category": "Hamburguesa",
+        "id": "02",
+        "category": "Carnes",
+        "name": "Hamburguesa Clasica Doble",
+        "price": "950",
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Doble Medallón de carne, lechuga, tomate, salsa ketchup, mayonesa y cebolla."
+    },
+    {
+        "id": "03",
+        "category": "Carnes",
+        "name": "Hamburguesa Cheddar",
+        "price": "950",
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Medallon de carne, acompañado de delicioso queso cheddar, salsa ketchup, cebolla y mostaza."
+    },
+    {
+        "id": "04",
+        "category": "Carnes",
+        "name": "Hamburguesa Doble Cheddar",
+        "price": "950",
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Doble Medallon de carne, acompañado de delicioso queso cheddar, salsa ketchup, cebolla y mostaza."
+    },
+    {
+        "id": "05",
+        "category": "Carnes",
         "name": "Hamburguesa Bacon",
         "price": "950",
         "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
-        "detail": "Medallón de carne, queso cheddar."
+        "detail": "Medallones de carne, acompañado de mucho bacon crocante, queso cheddar, salsa barbacoa y cebolla."
+    },
+    {
+        "id": "06",
+        "category": "Carnes",
+        "name": "Hamburguesa Bacon Doble",
+        "price": "950",
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Doble medallones de carne, acompañado de mucho bacon crocante, queso cheddar, salsa barbacoa y cebolla."
     },
     {
         "id": "07",
-        "category": "Pollo",
-        "name": "Hamburguesa Pollo Clasica",
+        "category": "Carnes",
+        "name": "Hamburguesa Bacon Triple",
         "price": "950",
-        "img": "https://www.guiadelnino.com/var/guiadelnino.com/storage/images/recetas-para-ninos-y-bebes/carnes-aves-y-jamon/hamburguesas-de-pollo-con-manzanas/7623991-8-esl-ES/hamburguesas-de-pollo-con-manzanas_w1140.jpg",
-        "detail": "Medallón de Pollo, queso cheddar."
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Triple medallones de carne, acompañado de mucho bacon crocante, queso cheddar, salsa barbacoa y cebolla."
     },
     {
         "id": "08",
-        "category": "Pollo",
-        "name": "Hamburguesa Pollo Cheddar",
+        "category": "Carnes",
+        "name": "Hamburguesa Bacon Cuadruple",
         "price": "950",
-        "img": "https://www.guiadelnino.com/var/guiadelnino.com/storage/images/recetas-para-ninos-y-bebes/carnes-aves-y-jamon/hamburguesas-de-pollo-con-manzanas/7623991-8-esl-ES/hamburguesas-de-pollo-con-manzanas_w1140.jpg",
-        "detail": "Medallón de Pollo, queso cheddar."
+        "img": "https://www.bros-kebab.at/wp-content/uploads/2020/06/kebab-bros-wien-burger-2.jpg",
+        "detail": "Cuadruple medallones de carne, acompañado de mucho bacon crocante, queso cheddar, salsa barbacoa y cebolla."
     },
+
     {
         "id": "09",
-        "category": "Ensalada",
-        "name": "Ensalada",
+        "category": "Pollos",
+        "name": "Hamburguesa Pollo Clasico",
         "price": "950",
-        "img": "https://i.pinimg.com/564x/35/54/c5/3554c5c18ea6e7f3bcf1667bece36423.jpg",
-        "detail": "Ensalada Mixta."
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/hamburguesa-pollo.png",
+        "detail": "Medallón de Pollo, con delicioso doble queso cheddar, lechuga, tomate, cebolla, mayonesa y salsa ketchup."
     },
+
+
     {
         "id": "10",
-        "category": "Ensalada",
-        "name": "Ensalada",
+        "category": "Pollos",
+        "name": "Hamburguesa Pollo Doble Clasica",
         "price": "950",
-        "img": "https://i.pinimg.com/564x/35/54/c5/3554c5c18ea6e7f3bcf1667bece36423.jpg",
-        "detail": "Ensalada Mixta."
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/doble-pollo.png",
+        "detail": "Doble Medallón de Pollo, con delicioso cuadruple queso cheddar, lechuga, tomate, cebolla, mayonesa y salsa ketchup."
     },
     {
         "id": "11",
-        "category": "Postre",
-        "name": "Helado",
+        "category": "Pollos",
+        "name": "Hamburguesa Pollo Bacon",
         "price": "950",
-        "img": "https://i.pinimg.com/564x/a7/3a/5f/a73a5fa2628d9cf5e04b7fe34a8cde9f.jpg",
-        "detail": "Sabor Vainilla y Chocolate."
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/hamburguesa-pollo.png",
+        "detail": "Medallón de Pollo, acompañado de delicioso bacon crocante, doble queso cheddar, lechuga, tomate, cebolla, mayonesa y salsa ketchup."
     },
     {
         "id": "12",
-        "category": "Postre",
-        "name": "Helado Combinado",
+        "category": "Pollos",
+        "name": "Hamburguesa Pollo Doble Bacon",
         "price": "950",
-        "img": "https://i.pinimg.com/564x/a7/3a/5f/a73a5fa2628d9cf5e04b7fe34a8cde9f.jpg",
-        "detail": "Sabor Vainilla y Chocolate."
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/doble-pollo.png",
+        "detail": "Doble Medallón de Pollo, acompañado de delicioso bacon crocante, doble queso cheddar, lechuga, tomate, cebolla, mayonesa y salsa ketchup."
+    },
+
+    {
+        "id": "13",
+        "category": "Pollos",
+        "name": "Nuggets + Papas Clasica",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/nuggets-s.png",
+        "detail": "Crujientes nuggets de pollo acompañados con exquisitas papas a la francesa."
+    },
+    {
+        "id": "14",
+        "category": "Pollos",
+        "name": "Nuggets + Papas con Cheddar ",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/nuggets-s.png",
+        "detail": "Crujientes nuggets de pollo acompañados con exquisitas papas a la francesa con cheddar."
+    },
+    {
+        "id": "15",
+        "category": "Pollos",
+        "name": "Aros de Cebolla",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/AROS-CEBOLLA.png",
+        "detail": "Crujientes aros de cebolla para disfrutar solos o acompañar tu combo preferido."
+    },
+    {
+        "id": "16",
+        "category": "Pollos",
+        "name": "Aros de Cebolla",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/AROS-CEBOLLA.png",
+        "detail": "Crujientes aros de cebolla para disfrutar solos o acompañar tu combo preferido."
+    },
+
+
+    {
+        "id": "17",
+        "category": "Ensalada",
+        "name": "Ensalada Clasca",
+        "price": "950",
+        "img": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/10/ensalada-griega-receta-con-pollo.jpg",
+        "detail": "Ensalada lechga, tomate, huevo, zanahoria."
+    },
+    {
+        "id": "18",
+        "category": "Ensalada",
+        "name": "Ensalada Yamani",
+        "price": "950",
+        "img": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/10/ensalada-griega-receta-con-pollo.jpg",
+        "detail": "Ensalada con arroz Yamaní, lechuga, tomate, acomapañada con pollo a elección."
+    },
+    {
+        "id": "19",
+        "category": "Ensalada",
+        "name": "Ensalada Yamani Veggie",
+        "price": "950",
+        "img": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/10/ensalada-griega-receta-con-pollo.jpg",
+        "detail": "Ensalada con arroz Yamaní, queso en hebras, lechuga y tomate."
+    },
+    {
+        "id": "20",
+        "category": "Ensalada",
+        "name": "Ensalada Caesar",
+        "price": "950",
+        "img": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/10/ensalada-griega-receta-con-pollo.jpg",
+        "detail": "Ensalada Caesar con lechuga, queso en hebras y croutons acompañado de pollo a elección."
+    },
+
+
+    {
+        "id": "21",
+        "category": "Postre",
+        "name": "Conos",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/Conos-tres-sabores.png",
+        "detail": "Probá nuestros conos helados: Max, Relleno y Clásico, y elegí entre crema americana, dulce de leche o combinado."
+    },
+    {
+        "id": "22",
+        "category": "Postre",
+        "name": "Sundae",
+        "price": "950",
+        "img": "http://sundae.com.es/images/sundae-Mc_Donalds-01.png",
+        "detail": "Animate a elegir entre la salsa de chocolate o dulce de leche ¡y creá tu propio torbellino de sabor!."
+    },
+    {
+        "id": "23",
+        "category": "Postre",
+        "name": "Sundae Tentacion",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/oregon.png",
+        "detail": "Sumérgete en un emocionante y delicioso remolino de sabores de vainilla y/o chocolate combinado con trozos de galleta oreo."
+    },
+    {
+        "id": "24",
+        "category": "Postre",
+        "name": "Twist",
+        "price": "950",
+        "img": "https://rapidogs.com/wp-content/uploads/2021/03/SUNDAE-frutos-rojos-amarillos-arequipe.png",
+        "detail": "Disfrutá de nuestros increíbles sabores de helados en sus variantes con chips de Chocolate Águila, Super Frutilla con deliciosa salsa de frutillas enteras."
     }
 ]
