@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import '../BuyButtons/BuyButtons.css';
 
 export default function BuyButtons() {
-
+    
     return (
-        <div className="buyButtons">
+        <div className="buyButton">
             <Link to='/cart'>
-                <button className="buyButtons__goToCart">Ver pedido</button>
+                <button className="button">Seguir comprando</button>
             </Link>
             <Link to='/'>
-                <button className="buyButtons__goToMenu">Volver al menú</button>
+                <button className="button">Finalizar compra</button>
             </Link>
         </div>
     );

@@ -1,13 +1,22 @@
 .itemCount {
+    padding: 5%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    gap: 0.2em;
+    width: 100%;
+    border-radius: 10px;
+}
+.itemCount__minusBtn:hover{
+    transform: scale(1.6);
+    transition-duration: 0.5s;
+    background: rgb(160, 166, 255);
 }
 .itemCount__minusBtn {
     border: none;
-    background: rgb(0, 5, 77);
+    background: #0026ff;
     width: 30px;
-    padding-bottom: 0.4rem;
+    padding-bottom: 1rem;
     border-radius: 10%;
     cursor: pointer;
     font-size: 2rem;
@@ -19,22 +28,41 @@
 }
 .itemCount__plusBtn {
     border: none;
-    background: rgb(0, 5, 77);
+    background: #0026ff;
     width: 30px;
-    padding-bottom: 0.4rem;
+    padding-bottom: 1rem;
     border-radius: 10%;
     cursor: pointer;
     font-size: 2rem;
     color: white;
     margin-left: 1rem;
 }
-.itemCount__addToCartBtn {
-    margin-left: 3rem;
-    border: none;
-    background: rgba(0,0,0,0);
-    border-radius: 10%;
-    cursor: pointer;
-    font-size: 3rem;
+.itemCount__plusBtn:hover{
+    transform: scale(1.6);
+    transition-duration: 0.5s;
+    background-color:rgb(160, 166, 255);
+}
+.containerBotonCarrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.botonCarrito {
+    padding: 1em;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #0026ff;
+}
+.botonCarrito:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    background: rgb(160, 166, 255);
+}
+.botonCarrito {
     color: white;
-    padding-bottom: 0.4rem;
+}
+
+@media (min-width: 600px) {
+
 }

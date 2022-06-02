@@ -9,6 +9,7 @@ import '../NavBar/NavBar.css';
 const NavBar = () => {
     return (
         <>
+        <header className="header">
             <Navbar collapseOnSelect expand="lg" className="Navbar__Header">
                 <Container>
                     <Link to='/'>
@@ -34,7 +35,7 @@ const NavBar = () => {
                     <CartWidget />
                 </Container>
             </Navbar>
-
+            </header>
         </>
     )
 }

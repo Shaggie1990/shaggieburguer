@@ -24,7 +24,9 @@ export default function ItemCount({item, initial, stock, onAdd, handleInputType}
             <button id='less' className="itemCount__minusBtn" onClick={decrease}>-</button>
             <span className="itemCount__quantity">{quantity}</span>
             <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
-            <button className="itemCount__addToCartBtn" onClick={addToCart}><i class="bi bi-bag-plus"></i></button>
+        <div className="containerBotonCarrito">
+            <button className="botonCarrito" onClick={addToCart}>Agregar al Carrito</button>       
+        </div>
         </div>
     );
 }
