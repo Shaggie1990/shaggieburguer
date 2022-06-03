@@ -7,20 +7,13 @@ import '../ItemDetail/ItemDetail.css';
 
 export default function ItemDetail({item}) {
     const [inputType, setInputType] = useState('itemCount');
-    //const [quantityToAdd,setQuantityToAdd] = useState();
-    const {addToCart, cartList} = UseCartContext();
+    const {addToCart} = UseCartContext();
 
-    function onAdd(quantity, name) {
-        //setQuantityToAdd(quantity)
-        console.log(`${quantity} unidad/es de ${name} agregada/s al pedido`);
-        addToCart({item, quantity})
-    }
-    function handleInputType() {
+    function onAdd(quantity) {
+        addToCart({...item, quantity})
         setInputType('buyButtons');
     }
-
-    console.log(cartList);
-
+    
     return (
         <div className="itemDetail">
             <img className="itemDetail__img" src={item.img} alt="" />
@@ -28,7 +21,7 @@ export default function ItemDetail({item}) {
                 <h3 className="itemDetail__title">{item.name}</h3>
                 <p className="itemDetail__detail">{item.detail}</p>
                 {inputType === 'itemCount' ?
-                    <ItemCount item={item} initial={1} stock={5} onAdd={onAdd} handleInputType={handleInputType}/>:
+                    <ItemCount initial={1} stock={5} onAdd={onAdd}/>:
                     <BuyButtons/>}
             </div>
         </div>

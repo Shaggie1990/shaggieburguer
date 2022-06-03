@@ -1,9 +1,11 @@
 import { useState } from 'react';
+
+import { BsBag } from "react-icons/bs";
 import '../ItemCount/ItemCount.css';
 
-export default function ItemCount({item, initial, stock, onAdd, handleInputType}) {
+export default function ItemCount({initial, stock, onAdd}) {
     const [quantity, setQuantity] = useState(initial);
-
+    
     function increase() {
         if (quantity < stock) {
             setQuantity(quantity + 1);
@@ -14,9 +16,8 @@ export default function ItemCount({item, initial, stock, onAdd, handleInputType}
             setQuantity(quantity - 1);
         } 
     }
-    function addToCart() {
-        onAdd(quantity, item.name);
-        handleInputType();
+    function addItem() {
+        onAdd(quantity);
     }
     
     return (
@@ -25,8 +26,8 @@ export default function ItemCount({item, initial, stock, onAdd, handleInputType}
             <span className="itemCount__quantity">{quantity}</span>
             <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
         <div className="containerBotonCarrito">
-            <button className="botonCarrito" onClick={addToCart}>Agregar al Carrito</button>       
+            <button className="botonCarrito" onClick={addItem}><h3> <BsBag /> </h3>Agregar al Carrito</button>       
         </div>
-        </div>
+    </div>
     );
 }
