@@ -1,3 +1,8 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .itemListContainer {
     width: 100%;
     min-height: calc(100vh - 85px);
@@ -6,13 +11,11 @@
     align-content: center;
     justify-content: center;
 }
-
 @media (min-width: 600px) {
     .itemListContainer {
         min-height: calc(100vh - 50px);
     }
 }
-
 @media (min-width: 768px) {
     .itemListContainer {
         min-height: calc(100vh - 59px);

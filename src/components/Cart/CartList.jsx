@@ -8,7 +8,7 @@ export default function CartList() {
     return (
         <div className="cartList">
             <h1 className="cart__title">Su pedido:</h1>
-            {cartList.map((el) => <CartItem key={el.id} item={el}/>)}
+            {cartList.map((prod) => <CartItem key={prod.id} item={prod}/>)}
             <p>{`Costo total: $${totalPrice}`}</p>
             <button onClick={clearCart}>Vaciar pedido</button>
         </div>

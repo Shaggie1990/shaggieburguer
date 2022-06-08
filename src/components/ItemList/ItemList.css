@@ -1,3 +1,8 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .itemList {
     width: 100%;
     display: flex;
@@ -8,13 +13,11 @@
     background-color: #3856ff;
     min-height: calc(100vh - 85px);
 }
-
 @media (min-width: 600px) {
     .itemList {
         min-height: calc(100vh - 50px);
     }
 }
-
 @media (min-width: 768px) {
     .itemList {
         min-height: calc(100vh - 59px);

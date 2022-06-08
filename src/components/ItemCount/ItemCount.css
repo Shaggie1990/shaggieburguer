@@ -1,3 +1,8 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .itemCount {
     padding: 5%;
     display: flex;
@@ -15,7 +20,7 @@
 .itemCount__minusBtn {
     border: none;
     background: #0026ff;
-    width: 30px;
+    width: 40px;
     padding-bottom: 1rem;
     border-radius: 10%;
     cursor: pointer;
@@ -24,12 +29,13 @@
     margin-right: 1rem;
 }
 .itemCount__quantity {
-    font-size: 2rem;
+    font-size: 20px;
+    color: white;
 }
 .itemCount__plusBtn {
     border: none;
     background: #0026ff;
-    width: 30px;
+    width: 40px;
     padding-bottom: 1rem;
     border-radius: 10%;
     cursor: pointer;
@@ -49,7 +55,8 @@
     width: 100%;
 }
 .botonCarrito {
-    padding: 1em;
+    width: 80%;
+    padding: 10px;
     border-radius: 10px;
     border-style: none;
     background-color: #0026ff;

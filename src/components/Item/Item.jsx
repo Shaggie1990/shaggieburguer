@@ -1,19 +1,26 @@
 import { Link } from 'react-router-dom';
 import '../Item/Item.css';
 
-export default function Item({el}) {
+
+const Item = ({ prod }) => {
     return (
-        <div className="item">
-            <img className="item__img" src={el.img} alt="" />
-            <div className="item__filter"></div>
-            <div className='item__info'>
-                <p className='item__category'>{el.category}</p>
-                <h3 className="item__title">{el.name}</h3>
-                <p className='item__price'>{`Precio: $${el.price}`}</p>
-                <Link to={`/itemDetail/${el.id}`}>
-                    <button className="item__addBtn" >Agregar al pedido</button>
-                </Link>
+        <div className="card-container col-md-4" >
+            <div className="card w-100 mt-5" >
+                <div className="card-item_header">
+                    <h2>{prod.name}</h2>
+                </div>
+                <div className="card-item_body">
+                    <img src={prod.img} alt=''/>
+                    <p>{prod.category}</p>
+                    <h3>{`Precio: $${prod.price}`}</h3>
+                </div>
+                <div className="card-item_Footer">
+                    <Link to={`/itemDetail/${prod.id}`}>
+                        <button className="card_btn"> Agregar al Pedido </button>
+                    </Link>
+                </div>
             </div>
         </div>
-    );
+    )
 }
+export default Item

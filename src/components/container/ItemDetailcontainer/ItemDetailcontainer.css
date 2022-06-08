@@ -1,11 +1,16 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .itemDetailContainer {
     width: 100vw;
     height: calc(100vh - 85px);
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
     justify-content: center;
     overflow-y: scroll;
+    align-content: flex-start;
 }
 
 @media (min-width: 600px) {
