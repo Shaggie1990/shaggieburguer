@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
+    <CartContextProv>
       <BrowserRouter>
-        <CartContextProv>
           <div className="App">
             <NavBar />
             <Routes>
@@ -23,8 +23,8 @@ function App() {
               <Route path="/*" element={<Navigate to="/" replace/>} />
             </Routes>
           </div>
-        </CartContextProv>
       </BrowserRouter>
+    </CartContextProv>
   );
 }
 

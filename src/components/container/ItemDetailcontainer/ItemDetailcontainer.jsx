@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams,} from "react-router-dom";
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import ItemDetail from "../../ItemDetail/ItemDetail";
 import Loader from "../../Loader/Loader";
 import '../ItemDetailcontainer/ItemDetailContainer.css';
@@ -7,19 +8,17 @@ import '../ItemDetailcontainer/ItemDetailContainer.css';
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
     const [loader,setLoader] = useState(true);
-
-    const {id} = useParams();
+    const {detalleId} = useParams();
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch("/assets/data.json")
-            .then(response => response.json())
-            .then(itemsList => itemsList.find(el => el.id === id))
-            .then(data => setItem(data))
-            .catch(err => console.log(err))
-            .finally(() => setLoader(false))
-        }, 3000);
-    },[id]);
+        const db = getFirestore();
+        const dbQuery = doc(db, 'items', detalleId);
+        getDoc(dbQuery)
+        .then(resp => setItem({id: resp.id, ...resp.data()}))
+        .catch(err => console.log(err))
+        .finally(() => setLoader(false))
+    },[]);
+
     return (
         <div className="itemDetailContainer">
             {loader?

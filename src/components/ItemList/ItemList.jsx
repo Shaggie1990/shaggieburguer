@@ -2,13 +2,12 @@ import Item from "../Item/Item";
 import '../../components/ItemList/ItemList.css';
 
 
-export default function ItemList({items, id}) {
+export default function ItemList({items}) {
 
     return (
         <div className="itemList">
-            {id? 
-                items.filter(prod => prod.category === id).map((prod) => <Item key={prod.id} prod={prod}/>):
-                items.map((prod) => <Item key={prod.id} prod={prod}/>)
+            {
+                items.map((item) => <Item key={item.id} prod={item}/>)
             }
         </div>
     );

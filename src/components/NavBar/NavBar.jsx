@@ -24,10 +24,13 @@ const NavBar = () => {
                             <Link to='/category/Pollos' className='navBar__link'>
                                 Pollos
                             </Link>
+                            <Link to='/category/Nuggets' className='navBar__link'>
+                                Nuggets
+                            </Link>
                             <Link to='/category/Ensalada' className='navBar__link'>
                                 Ensaladas
                             </Link>
-                            <Link to='/category/Postre' className='navBar__link'>
+                            <Link to='/category/Postres' className='navBar__link'>
                                 Postres
                             </Link>
                         </Nav>
