@@ -7,7 +7,7 @@ import '../ItemDetail/ItemDetail.css';
 
 const ItemDetail = ({ item }) =>  {
     const [inputType, setInputType] = useState('itemCount');
-    const {addToCart} = UseCartContext();
+    const {qtyInCart, addToCart, checkStock} = UseCartContext();
 
     function onAdd(quantity) {
         alert(`${quantity} ${item.name} agregados al carrito`)
@@ -16,7 +16,7 @@ const ItemDetail = ({ item }) =>  {
     }
     
     return (
-        <div className="card_itemDetail">
+        <div onLoad={() => {checkStock(item)}} className="card_itemDetail">
             <div className=" width: '10rem'" >
                 <div className="card-itemDetail_header">
                     <h2>{item.name}</h2>     
@@ -29,7 +29,8 @@ const ItemDetail = ({ item }) =>  {
                 </div>
                 <div className="card-footer">
                     {inputType === 'itemCount' ?
-                    <ItemCount initial={1} stock={5} onAdd={onAdd}/>:<BuyButtons/>}
+                    <ItemCount stock={item.stock - qtyInCart} onAdd={onAdd}/>:
+                    <BuyButtons/>}
                 </div>
             </div>
         </div>

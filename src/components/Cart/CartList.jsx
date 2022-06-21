@@ -30,14 +30,14 @@ export default function CartList({sendOrderManage}) {
 
     return (
         <div className="cartList">
-            <h1 className="cart__title">Su pedido:</h1>
+            <h1 className="cart__title">Su Pedido:</h1>
             {cartList.map((prod) => <CartItem key={prod.id} item={prod}/>)}
             <p>{`Costo total: $${totalPrice}`}</p>
 
 
             
-            <p>Ingrese sus datos para enviar el pedido:</p>
-            <form action="">
+            <h2>Ingrese sus datos para enviar el pedido:</h2>
+            <form action="form-control w-50 mt-5">
                 <input name="name" onChange={(e) => changeHandler(e)} type="text" placeholder="Nombre" />
                 {nameError && <span>Debe ingresar un nombre</span>}
                 <br />
@@ -52,8 +52,8 @@ export default function CartList({sendOrderManage}) {
                 <br />
                 <textarea name="comment" onChange={(e) => changeHandler(e)} id="" cols="30" rows="10"></textarea>
             </form>
-            <button onClick={clearCart}>Vaciar pedido</button>
-            <button onClick={dataManage}>Enviar pedido</button>
+            <button onClick={clearCart}>Vaciar Pedido</button>
+            <button onClick={dataManage}>Terminar Pedido</button>
 
         </div>
     );

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { addDoc, collection, getFirestore, where, query, documentId, writeBatch, getDocs } from "firebase/firestore";
 
 const cartContext = createContext([]);
 
@@ -10,13 +11,15 @@ export default function CartContextProv({children}) {
     const [cartList, setCartList] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
+    const [orderId, setOrderId] = useState();
+    const [qtyInCart, setQtyInCart] = useState(0);
 
-    function isInCart(id) {
-        return cartList.some(el => el.id === id);
+    function isInCart(item) {
+        return cartList.some(prod => prod.id === item.id);
     }
     function addToCart(item) {
-        if (isInCart(item.id)) {
-            let i = cartList.findIndex(el => el.id === item.id);
+        if (isInCart(item)) {
+            let i = cartList.findIndex(prod => prod.id === item.id);
             const newCartList = cartList;
             newCartList[i].quantity += item.quantity;
             updateCart(newCartList);
@@ -28,9 +31,7 @@ export default function CartContextProv({children}) {
         updateCart([]);
     }
     function clearItem(id) {
-        let i = cartList.findIndex(el => el.id === id);
-        const newCartList = cartList;
-        newCartList.splice(i,1);
+        const newCartList = cartList.filter(prod => prod.id !== id);
         updateCart(newCartList);
     }
     function updateCart(arr) {
@@ -44,15 +45,64 @@ export default function CartContextProv({children}) {
             .reduce((acc,curr) => acc+curr,0)
         );
     } 
+    function checkStock(item) {
+        if (isInCart(item)) {
+            let i = cartList.findIndex(prod => prod.id === item.id);
+            setQtyInCart(cartList[i].quantity);
+        } else {
+            setQtyInCart(0);
+        }
+    }
+    function createOrder(customerData) {
+        let order = {};
+        
+        order.customerData = customerData;
+        order.totalPrice = totalPrice;
+        order.items = cartList.map(item => {
+            const id = item.id;
+            const name = item.name;
+            const quantity = item.quantity;
+            const newStock = item.stock-item.quantity;
+            const price = item.price*item.quantity;
+            return {id, name, quantity, newStock, price}
+        });
+
+        async function updateStocks() {
+            const queryCollectionStocks = collection(db, 'items');
+            const queryUpdateStocks = query(queryCollectionStocks, where(documentId(), 'in', cartList.map(item => item.id)));
+            const batch = writeBatch(db);
+    
+            await getDocs(queryUpdateStocks)
+            .then(resp => resp.docs.forEach(
+                res => batch.update(res.ref, {stock: order.items.find(item => item.id === res.id).newStock})
+            ))
+            .catch(err => console.log(err))
+    
+            batch.commit()
+        }
+    
+        const db = getFirestore();
+        const queryCollectionOrders = collection(db, 'orders');
+        addDoc(queryCollectionOrders, order)
+        .then(resp => setOrderId(resp.id))
+        .then(() => updateStocks())
+        .catch(err => console.log(err))
+        .finally(() => clearCart())
+    };
 
     return (
         <cartContext.Provider value={{
             cartList,
+            totalPrice,
+            totalItems,
+            orderId,
+            qtyInCart,
             addToCart,
             clearCart,
             clearItem,
-            totalPrice,
-            totalItems
+            createOrder,
+            isInCart,
+            checkStock
         }}>
             {children}
         </cartContext.Provider>

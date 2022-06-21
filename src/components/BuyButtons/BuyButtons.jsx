@@ -6,10 +6,10 @@ export default function BuyButtons() {
     return (
         <div className="buyButton">
             <Link to='/cart'>
-                <button className="button">Seguir comprando</button>
+                <button className="button">Ver Pedido</button>
             </Link>
             <Link to='/'>
-                <button className="button">Finalizar compra</button>
+                <button className="button">Volver al Menú</button>
             </Link>
         </div>
     );

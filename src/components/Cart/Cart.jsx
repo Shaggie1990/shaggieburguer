@@ -17,9 +17,9 @@ export default function Cart() {
     if (!totalItems) {
         return (
             <div className="cart_cart1">
-            {orderSent ? <h1>Pedido enviado! Nro de pedido: {orderId}</h1> : <h1>El pedido está vacío</h1>}
+            {orderSent ? <h1>Pedido Enviado! Nro de Pedido: {orderId}</h1> : <h1>El Pedido Está Vacío</h1>}
                 <Link to='/'>
-                    <button>Volver al menú</button>
+                    <button>Volver al Menú</button>
                 </Link>
             </div>
         );

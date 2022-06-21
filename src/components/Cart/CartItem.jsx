@@ -11,6 +11,6 @@ export default function CartItem({item}) {
     }
 
     return (
-        <li>Item: {item.name} - Precio: ${item.price} - Cantidad: {item.quantity} - <span className="cart__remove-icon" onClick={removeItem}><i className="bi bi-cart-plus-fill"></i></span></li>
+        <li><img src={item.img} alt='' /> - Item: {item.name} - Precio: ${item.price} - Cantidad: {item.quantity} - <span className="cart__remove-icon" onClick={removeItem}><i className="bi-bag-x-fill"></i></span></li>
     );
 }

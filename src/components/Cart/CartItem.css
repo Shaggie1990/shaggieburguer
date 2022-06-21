@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&display=swap');
+
 *{  
     margin: 0;
     padding: 0;
@@ -6,7 +8,15 @@
 li {
     font-size: 2rem;
     margin: 1rem;
+    color: white;
+    list-style:none;
+    font-family: 'Open Sans', sans-serif;
 }
+li img{
+    width: 60px;
+    border-radius: 5%;
+}
+
 .cart__remove-icon {
     cursor: pointer;
 }
