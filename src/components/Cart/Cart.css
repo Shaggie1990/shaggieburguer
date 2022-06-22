@@ -1,18 +1,23 @@
-*{  
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     background-color: rgb(64, 83, 255);
 }
-.cart_cart{  
+
+.cart_cart {
     text-align: center;
-    background-color: rgb(64, 83, 255); 
+    background-color: rgb(64, 83, 255);
 }
-.cart_cart button{
+
+.cart_cart button {
     border: none;
-    background:rgb(0, 5, 77);
+    background: rgb(0, 5, 77);
     padding: 0.5rem;
     padding-bottom: 0.8rem;
     border-radius: 5px;
@@ -20,31 +25,42 @@ html{
     font-size: 2.0rem;
     color: white;
     justify-content: space-around;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart button:hover{
+
+.cart_cart button:hover {
     transform: scale(1.06);
     transition-duration: 0.5s;
     background-color: rgb(160, 166, 255);
 }
-.cart_cart p{
+
+.cart_cart p {
     color: white;
     font-size: 25px;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart h1{
+
+.cart_cart h1 {
     color: white;
     font-size: 35px;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart h3{
+
+.cart_cart h3 {
     color: white;
     font-size: 35px;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1{  
+
+.cart_cart1 {
     text-align: center;
-    background-color: rgb(64, 83, 255); 
+    background-color: rgb(64, 83, 255);
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1 button{
+
+.cart_cart1 button {
     border: none;
-    background:rgb(0, 5, 77);
+    background: rgb(0, 5, 77);
     padding: 0.5rem;
     padding-bottom: 0.8rem;
     border-radius: 5px;
@@ -52,21 +68,30 @@ html{
     font-size: 2.0rem;
     color: white;
     justify-content: space-around;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1 button:hover{
+
+.cart_cart1 button:hover {
     transform: scale(1.06);
     transition-duration: 0.5s;
     background-color: rgb(160, 166, 255);
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1 p{
+
+.cart_cart1 p {
     color: white;
     font-size: 25px;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1 h1{
+
+.cart_cart1 h1 {
     color: white;
     font-size: 35px;
+    font-family: 'Bakbak One', cursive;
 }
-.cart_cart1 h3{
+
+.cart_cart1 h3 {
     color: white;
     font-size: 35px;
+    font-family: 'Bakbak One', cursive;
 }

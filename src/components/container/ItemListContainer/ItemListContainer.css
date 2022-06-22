@@ -1,8 +1,11 @@
-*{  
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .itemListContainer {
     width: 100%;
     min-height: calc(100vh - 85px);
@@ -10,12 +13,16 @@
     flex-flow: row wrap;
     align-content: center;
     justify-content: center;
+    background-color: #3856ff;
+    font-family: 'Bakbak One', cursive;
 }
+
 @media (min-width: 600px) {
     .itemListContainer {
         min-height: calc(100vh - 50px);
     }
 }
+
 @media (min-width: 768px) {
     .itemListContainer {
         min-height: calc(100vh - 59px);

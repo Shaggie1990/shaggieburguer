@@ -3,13 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 img {
   vertical-align: middle;
   max-width: 100%;
 }
+
 svg {
   vertical-align: middle;
+}
+
+.App__Titulo h1 {
+  text-align: center;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 5rem;
+  color: white;
+  justify-content: space-around;
+}
+
+.App__Titulo {
+  background-color: #3856ff;
+  height: 150px;
+  position: -webkit-sticky;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+
+body {
+  font-family: 'Bakbak One', cursive;
 }

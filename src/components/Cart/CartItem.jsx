@@ -1,6 +1,5 @@
 import { UseCartContext } from "../../context/CartContext";
 
-
 import '../Cart/CartItem.css';
 
 export default function CartItem({ item }) {

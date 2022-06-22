@@ -1,4 +1,5 @@
 import logoloader from '../../images/Loader1.jpg';
+
 import Spinner from 'react-bootstrap/Spinner'
 import '../Loader/Loader.css';
 

@@ -1,6 +1,8 @@
 import { UseCartContext } from "../../context/CartContext";
+
 import CartItem from "../Cart/CartItem";
 import CartForm from "../Cart/CartForm";
+
 import './CartList.css';
 
 export default function CartList() {

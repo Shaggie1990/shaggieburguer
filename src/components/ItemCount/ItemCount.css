@@ -1,8 +1,11 @@
-*{  
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&family=Ubuntu:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .itemCount {
     padding: 5%;
     display: flex;
@@ -12,11 +15,13 @@
     width: 100%;
     border-radius: 10px;
 }
-.itemCount__minusBtn:hover{
+
+.itemCount__minusBtn:hover {
     transform: scale(1.6);
     transition-duration: 0.5s;
     background: rgb(160, 166, 255);
 }
+
 .itemCount__minusBtn {
     border: none;
     background: #0026ff;
@@ -28,10 +33,12 @@
     color: white;
     margin-right: 1rem;
 }
+
 .itemCount__quantity {
     font-size: 20px;
     color: white;
 }
+
 .itemCount__plusBtn {
     border: none;
     background: #0026ff;
@@ -43,17 +50,20 @@
     color: white;
     margin-left: 1rem;
 }
-.itemCount__plusBtn:hover{
+
+.itemCount__plusBtn:hover {
     transform: scale(1.6);
     transition-duration: 0.5s;
-    background-color:rgb(160, 166, 255);
+    background-color: rgb(160, 166, 255);
 }
+
 .containerBotonCarrito {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
 .botonCarrito {
     width: 80%;
     padding: 10px;
@@ -61,15 +71,15 @@
     border-style: none;
     background-color: #0026ff;
 }
-.botonCarrito:hover{
+
+.botonCarrito:hover {
     transform: scale(1.1);
     transition-duration: 0.5s;
     background: rgb(160, 166, 255);
 }
+
 .botonCarrito {
     color: white;
 }
 
-@media (min-width: 600px) {
-
-}
+@media (min-width: 600px) {}

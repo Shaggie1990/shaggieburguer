@@ -3,6 +3,7 @@ import { UseCartContext } from "../../context/CartContext";
 
 import ItemCount from "../ItemCount/ItemCount";
 import BuyButtons from "../BuyButtons/BuyButtons";
+
 import '../ItemDetail/ItemDetail.css';
 
 const ItemDetail = ({ item }) => {
