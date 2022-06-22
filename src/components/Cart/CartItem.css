@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&display=swap');
-
 *{  
     margin: 0;
     padding: 0;
@@ -16,7 +15,9 @@ li img{
     width: 60px;
     border-radius: 5%;
 }
-
+.bi-bag-x-fill{
+    color: rgb(0, 5, 77);
+}
 .cart__remove-icon {
     cursor: pointer;
 }

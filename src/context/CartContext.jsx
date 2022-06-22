@@ -7,11 +7,11 @@ export function UseCartContext() {
     return useContext(cartContext)
 }
 
-export default function CartContextProv({children}) {
+export default function CartContextProv({ children }) {
     const [cartList, setCartList] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
-    const [orderId, setOrderId] = useState();
+    const [orderId, setOrderId] = useState('');
     const [qtyInCart, setQtyInCart] = useState(0);
 
     function isInCart(item) {
@@ -24,28 +24,31 @@ export default function CartContextProv({children}) {
             newCartList[i].quantity += item.quantity;
             updateCart(newCartList);
         } else {
-            updateCart([...cartList,item]);
+            updateCart([...cartList, item]);
         }
     }
-    function clearCart() {
+    function clearCart(sent) {
+        if (sent !== 'sent') setOrderId('');
         updateCart([]);
     }
-    function clearItem(id) {
-        const newCartList = cartList.filter(prod => prod.id !== id);
+    function clearItem(item) {
+        setOrderId('');
+        const newCartList = cartList.filter(prod => prod.id !== item.id);
         updateCart(newCartList);
     }
+
     function updateCart(arr) {
         setCartList(arr);
         setTotalPrice(arr
-            .map(curr => curr.quantity*curr.price)
-            .reduce((acc,curr) => acc+curr,0)
+            .map(curr => curr.quantity * curr.price)
+            .reduce((acc, curr) => acc + curr, 0)
         );
         setTotalItems(arr
             .map(curr => curr.quantity)
-            .reduce((acc,curr) => acc+curr,0)
+            .reduce((acc, curr) => acc + curr, 0)
         );
-    } 
-    function checkStock(item) {
+    }
+    function checkQtyInCart(item) {
         if (isInCart(item)) {
             let i = cartList.findIndex(prod => prod.id === item.id);
             setQtyInCart(cartList[i].quantity);
@@ -55,39 +58,39 @@ export default function CartContextProv({children}) {
     }
     function createOrder(customerData) {
         let order = {};
-        
+
         order.customerData = customerData;
         order.totalPrice = totalPrice;
         order.items = cartList.map(item => {
             const id = item.id;
             const name = item.name;
             const quantity = item.quantity;
-            const newStock = item.stock-item.quantity;
-            const price = item.price*item.quantity;
-            return {id, name, quantity, newStock, price}
+            const newStock = item.stock - item.quantity;
+            const price = item.price * item.quantity;
+            return { id, name, quantity, newStock, price }
         });
 
         async function updateStocks() {
             const queryCollectionStocks = collection(db, 'items');
             const queryUpdateStocks = query(queryCollectionStocks, where(documentId(), 'in', cartList.map(item => item.id)));
             const batch = writeBatch(db);
-    
+
             await getDocs(queryUpdateStocks)
-            .then(resp => resp.docs.forEach(
-                res => batch.update(res.ref, {stock: order.items.find(item => item.id === res.id).newStock})
-            ))
-            .catch(err => console.log(err))
-    
+                .then(resp => resp.docs.forEach(
+                    res => batch.update(res.ref, { stock: order.items.find(item => item.id === res.id).newStock })
+                ))
+                .catch(err => console.log(err))
+
             batch.commit()
         }
-    
+
         const db = getFirestore();
         const queryCollectionOrders = collection(db, 'orders');
         addDoc(queryCollectionOrders, order)
-        .then(resp => setOrderId(resp.id))
-        .then(() => updateStocks())
-        .catch(err => console.log(err))
-        .finally(() => clearCart())
+            .then(resp => setOrderId(resp.id))
+            .then(() => updateStocks())
+            .catch(err => console.log(err))
+            .finally(() => clearCart('sent'))
     };
 
     return (
@@ -102,7 +105,7 @@ export default function CartContextProv({children}) {
             clearItem,
             createOrder,
             isInCart,
-            checkStock
+            checkQtyInCart
         }}>
             {children}
         </cartContext.Provider>

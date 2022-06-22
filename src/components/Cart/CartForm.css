@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Comforter+Brush&family=Open+Sans&display=swap');
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .cartForm { 
     text-align: center;
 }
-h1 {
-    font-size: 3rem;
-    margin: 1rem;
-}
-p {
+.cartForm__title {
     font-size: 2rem;
     margin: 1rem;
+}
+.cartForm__input, .cartForm__textarea, .cartForm__error {
+    margin: 0.5rem auto;
+    display: block;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    text-shadow: 5px 5px 5px #3856ff;
+}
+.cartForm__error {
+    color: red;
+    margin-bottom: 1rem;
 }
